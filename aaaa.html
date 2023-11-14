@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+* {
+    font-family: sans-serif;
+}
+
+    .App {
+  text-align: center;
+  background-color: rgb(170, 170, 170) ;
+  width: 500px;
+  height: 300px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px rgb(0, 47, 78)
+}
+
+button {
+  display: block;
+  text-align: center;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+    text-align: center;
+  background-color: rgb(88, 88, 88);
+  color: rgb(255, 255, 255);
+  display: block;
+  width: 310px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s ease;
+  box-shadow: 10px 5px 5px rgb(134, 134, 134);
+}
+
+body {
+  background-color: rgb(31, 93, 151);
+}
+
+h1 {
+  padding-top: 60px;
+}
+  </style>
+</head>
+
+<body>
+    <center>
+  <div class='App'>
+    <h1>Счетчик: 0</h1>
+    <center>
+    <button onclick="handleIncrement()">Увеличить счетчик</button>
+    <button onclick="minushandleIncrement()">Убавить счетчик</button>
+</center>
+  </div>
+</center>
+
+  <script>
+    let count = 0;
+
+    function handleIncrement() {
+      count++;
+      updateCounter();
+    }
+
+    function minushandleIncrement() {
+      count--;
+      updateCounter();
+    }
+
+    function updateCounter() {
+      document.querySelector('h1').textContent = `Счетчик: ${count}`;
+    }
+  </script>
+</body>
+
+</html>
